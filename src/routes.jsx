@@ -6,9 +6,12 @@ import {
     Route,
 } from "react-router-dom";
 import { Layout } from "./pages/Layout";
-import { Home } from "./pages/Home";
+import  Home  from "./pages/Home";
 import { Single } from "./pages/Single";
 import { Demo } from "./pages/Demo";
+import CharacterDetails from '../src/pages/CharachterDetails';
+import PlanetDetails from "./pages/PlanetDetails";
+import VehicleDetails from "./pages/VehicleDetails";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -25,6 +28,10 @@ export const router = createBrowserRouter(
         <Route path= "/" element={<Home />} />
         <Route path="/single/:theId" element={ <Single />} />  {/* Dynamic route for single items */}
         <Route path="/demo" element={<Demo />} />
+        <Route path='/details/character/:id' element={<CharacterDetails />} />
+        <Route path='/details/planet/:id' element={<PlanetDetails />} />
+        <Route path='/details/vehicle/:id' element={<VehicleDetails />} />
+
       </Route>
     )
 );

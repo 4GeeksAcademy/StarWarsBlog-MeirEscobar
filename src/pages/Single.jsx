@@ -9,17 +9,14 @@ export const Single = props => {
   // Access the global state using the custom hook.
   const { store } = useGlobalReducer()
 
-  // Retrieve the 'theId' URL parameter using useParams hook.
   const { theId } = useParams()
   const singleTodo = store.todos.find(todo => todo.id === parseInt(theId));
 
   return (
     <div className="container text-center">
-      {/* Display the title of the todo element dynamically retrieved from the store using theId. */}
       <h1 className="display-4">Todo: {singleTodo?.title}</h1>
-      <hr className="my-4" />  {/* A horizontal rule for visual separation. */}
+      <hr className="my-4" />
 
-      {/* A Link component acts as an anchor tag but is used for client-side routing to prevent page reloads. */}
       <Link to="/">
         <span className="btn btn-primary btn-lg" href="#" role="button">
           Back home
@@ -29,9 +26,6 @@ export const Single = props => {
   );
 };
 
-// Use PropTypes to validate the props passed to this component, ensuring reliable behavior.
 Single.propTypes = {
-  // Although 'match' prop is defined here, it is not used in the component.
-  // Consider removing or using it as needed.
   match: PropTypes.object
 };

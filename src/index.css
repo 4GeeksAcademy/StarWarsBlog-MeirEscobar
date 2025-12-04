@@ -1,5 +1,222 @@
+/*===========Body - Fondo del Espacio Profundo y Cinegético================*/
+
+body {
+  background-image: url("/src/assets/img/fondo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #ffde00; /* Color primario de Star Wars (Amarillo/Dorado) */
+  font-family: 'Arial Black', Gadget, sans-serif; /* Fuente impactante, idealmente una fuente Star Wars si estuviera disponible */
+}
+
+/*========NavBar - La Interfaz de una Nave Capital==========*/
+
 .logo {
-    display: flex; /* Habilita el layout flexible */
-    align-items: center; /* Alinea verticalmente la imagen y el texto */
-    gap: 15px; /* Añade un pequeño espacio entre la imagen y el texto */
+  width: 90px; /* Un poco más grande */
+  height: 90px;
+  overflow: hidden;
+  border-radius: 50%; /* Le da un aspecto de insignia o holograma */
+  box-shadow: 0 0 10px #dc3545; /* Brillo Sith/Imperial (Rojo) */
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navbar{
+  /* Un color oscuro, casi negro, con un ligero tinte metálico */
+  background-color: rgba(10, 10, 10, 0.95);
+  color: #dc3545; /* Color de la interfaz a Rojo Carmesí */
+  border-bottom: 2px solid #dc3545; /* Línea de energía / escaneo a Rojo */
+  box-shadow: 0 0 15px rgba(220, 53, 69, 0.5); /* Sombra a Rojo */
+  padding: 10px 0;
+}
+
+/*=========CardsHome - Paneles de Información Holográficos==========*/
+
+.card {
+  /* AUMENTAMOS LA OPACIDAD del fondo de 0.8 a 0.95 */
+  /* El fondo casi negro mejora la legibilidad */
+  background-color: rgba(26, 26, 26, 0.95) !important; 
+  border: 1px solid #dc3545 !important; /* Borde primario a Rojo Carmesí */
+  box-shadow: 0 0 12px 3px rgba(220, 53, 69, 0.8) !important; /* Fuerte brillo neón a Rojo */
+  color: #f0f0f0 !important;
+  transition: all 0.4s ease-in-out;
+  border-radius: 5px;
+}
+
+.card:hover {
+    /* Efecto "Carga de Energía Sith" */
+    
+    /* 1. Múltiples Sombras de Brillo: Rojo (Sith) y Amarillo (SW Clásico) */
+box-shadow: 
+        /* AJUSTE CLAVE: Sombra Roja (Sith) Intensa y más grande que el amarillo */
+        0 0 35px 12px rgba(220, 53, 69, 1.0), /* Brillo Rojo Intenso y dominante (Opacidad al 1.0) */
+        
+        /* La sombra dorada se mantiene fuerte, pero en segundo plano */
+        0 0 40px 15px rgba(255, 222, 0, 0.6) inset; /* Brillo Dorado Interno (Menor opacidad) */
+    
+    /* 2. Movimiento Sutil */
+    transform: translateY(-5px) scale(1.01) rotateZ(0.5deg);
+    
+    /* 3. Borde Rojo en Hover para coincidir con la sombra */
+    border-color: #dc3545 !important;
+}
+
+
+.card-title {
+  color: #ffde00 !important; /* Amarillo/Dorado Star Wars */
+  text-shadow: 0 0 5px #ffde00, 0 0 10px rgba(255, 222, 0, 0.5); /* Fuerte resplandor */
+  font-weight: bold;
+}
+
+.card-text {
+  color: #b0b0b0 !important; /* Gris de interfaz */
+}
+
+.card-body .border-secondary {
+  /* Mantenemos el borde interno oscuro/sutil */
+  border-color: #333333 !important;
+}
+
+
+.learn-more.btn.border-warning {
+  color: #ffde00 !important;
+  border-color: #ffde00 !important;
+  background-color: transparent !important;
+  text-transform: uppercase;
+}
+.learn-more.btn.border-warning:hover {
+  background-color: #ffde00 !important;
+  color: #000000 !important;
+  box-shadow: 0 0 10px #ffde00;
+}
+
+.heart-icon {
+  background-color: transparent !important;
+  transition: all 0.3s;
+}
+
+.heart-icon .fa-regular.fa-heart {
+  color: #ffde00 !important; /* Corazón de "interfaz" a Dorado */
+}
+.heart-icon.border-warning {
+  border-color: #ffde00 !important; /* Borde a Dorado */
+}
+
+.heart-icon .fa-solid.fa-heart {
+  color: #dc3545 !important; /* Corazón "Sith/Lado Oscuro" - Rojo intenso */
+  text-shadow: 0 0 5px #dc3545;
+}
+.heart-icon.border-danger {
+  border-color: #dc3545 !important;
+}
+
+.heart-icon:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 5px #ffde00);
+}
+
+.learn-more.btn.border-danger {
+  color: #dc3545 !important;
+  border-color: #dc3545 !important;
+  background-color: transparent !important;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+
+.learn-more.btn.border-danger:hover {
+  background-color: #dc3545 !important;
+  color: #f0f0f0 !important;
+  box-shadow: 0 0 10px #dc3545;
+}
+
+/*=========Home - Consola de Navegación Estelar========*/
+
+.star-wars-home {
+  /* Mantenemos un fondo oscuro y casi opaco */
+  min-height: 100vh;
+  padding-left: 5rem !important;
+  padding-right: 5rem !important;
+  color: #e0e0e0;
+}
+
+.section-title {
+  padding-top: 2.5rem; /* Más espacio */
+  padding-bottom: 1.5rem;
+  margin-bottom: 3rem !important;
+  /* Borde estilo "título de pantalla de carga" */
+  border-bottom: 3px double #ffde00; /* Doble línea dorada */
+  text-shadow: 0 0 5px #ffde00;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+.section-separator {
+  height: 4px; /* Más grueso */
+  margin-top: 5rem;
+  margin-bottom: 5rem !important;
+  /* Barra de energía pulsante */
+  background: linear-gradient(90deg, transparent 0%, #dc3545 50%, transparent 100%); /* Pulsación a Rojo */
+  box-shadow: 0 0 20px 5px rgba(220, 53, 69, 0.8); /* Sombra a Rojo */
+  width: 90%; /* Un poco más estrecho para un efecto más limpio */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*===========CardsDetails - Monitoreo de Datos de la Cantina/Base===============*/
+
+.details-container {
+  /* AUMENTAMOS SIGNIFICATIVAMENTE LA OPACIDAD */
+  /* Subimos de 0.05 a 0.7 para que el texto resalte, pero el brillo se mantenga */
+  background-color: rgba(10, 10, 10, 0.7) !important; 
+  border: 1px solid #ffde00 !important;
+  box-shadow: 0 0 18px 5px rgba(255, 222, 0, 0.7) !important;
+  border-radius: 10px;
+  color: #f0f0f0;
+}
+
+.details-img {
+  border: 4px solid #dc3545; /* Marco de interfaz a Rojo Carmesí */
+  box-shadow: 0 0 15px #dc3545; /* Sombra a Rojo */
+  border-radius: 5px;
+}
+
+.details-container h1.text-warning {
+  color: #ffde00 !important;
+  text-shadow: 0 0 8px #ffde00, 0 0 15px rgba(255, 222, 0, 0.5); /* Brillo intenso para el nombre */
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.details-divider {
+  height: 4px;
+  /* Divisor más impactante (Azul Neón) */
+  background: #dc3545; /* Color del divisor a Rojo */
+  box-shadow: 0 0 25px 8px rgba(220, 53, 69, 0.9); /* Sombra a Rojo */
+  width: 80%; /* Más estrecho */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info-row {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(220, 53, 69, 0.3); /* Línea divisoria de datos a Rojo tenue */
+}
+
+.info-row h3 {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #b0b0b0;
+}
+
+.info-row span.text-warning {
+  font-weight: 700;
+  color: #ffde00 !important;
+  text-shadow: 0 0 4px #ffde00;
+  letter-spacing: 1px;
 }
