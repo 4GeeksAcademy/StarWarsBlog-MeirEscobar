@@ -37,7 +37,7 @@ const CharacterDetails = () => {
                 <div className='col-lg-7 p-4 text-white d-flex flex-column justify-content-center'>
                     <h1 className='mb-4 text-warning text-center text-lg-start'>{characterObj.name}</h1>
                     <p className='text-white-50 fs-5' style={{ lineHeight: '1.8' }}>
-                        **{characterObj.name}** es una figura crucial en la galaxia, con un pasado tan enigmático como su presente. Desde su año de nacimiento (**{characterObj.birthYear}**) ha demostrado ser una fuerza a tener en cuenta. Su historia está marcada por decisiones audaces que definieron su destino en las Guerras Clon y la posterior era del Imperio Galáctico. Es conocido por su estatura de **{characterObj.height}cm** y su particular color de piel (**{characterObj.skinColor}**), características que lo hacen inconfundible.
+                        {characterObj.name} es una figura crucial en la galaxia, con un pasado tan enigmático como su presente. Desde su año de nacimiento ({characterObj.birthYear}) ha demostrado ser una fuerza a tener en cuenta. Su historia está marcada por decisiones audaces que definieron su destino en las Guerras Clon y la posterior era del Imperio Galáctico. Es conocido por su estatura de {characterObj.height}cm y su particular color de piel ({characterObj.skinColor}), características que lo hacen inconfundible.
                     </p>
                 </div>
             </div>

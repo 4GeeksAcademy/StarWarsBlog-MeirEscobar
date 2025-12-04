@@ -27,7 +27,7 @@ const VehicleCard = ({ id, name, model, crew, manufacturer }) => {
             
             <div className="flex-shrink-0 w-30" style={{ maxWidth: '30%', minWidth: '30%' }}> 
                 <img 
-                    src='/src/assets/img/logo.png' 
+                    src='/src/assets/img/placeholdervehicles.png' 
                     className='img-fluid h-100 rounded-start' 
                     alt='Vehicle Placeholder' 
                     style={{ objectFit: 'cover' }} 
